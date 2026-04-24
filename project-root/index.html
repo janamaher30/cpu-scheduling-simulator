@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CPU Scheduling Simulator</title>
+  <link rel="stylesheet" href="../project-root/style.css" />
+</head>
+<body>
 
+<div class="container">
+
+  <h1>⚙ CPU Scheduling Simulator</h1>
+
+  <!-- INPUT -->
+  <div class="card">
+    <h2>➕ Add Process</h2>
+    <div class="inputs">
+      <input id="id" placeholder="Process ID" />
+      <input id="arrival" placeholder="Arrival Time" />
+      <input id="burst" placeholder="Burst Time" />
+      <input id="priority" placeholder="Priority" />
+      <button onclick="addProcess()">Add</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>⏱ Round Robin Quantum</h2>
+    <input id="quantum" placeholder="Enter Quantum" />
+  </div>
+
+  <!-- TABLE -->
+  <div class="card">
+    <h2>📋 Processes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Arrival</th>
+          <th>Burst</th>
+          <th>Priority</th>
+        </tr>
+      </thead>
+      <tbody id="processTable"></tbody>
+    </table>
+  </div>
+   <!-- RUN -->
+  <button class="run-btn" onclick="runAlgorithms()">🚀 Run Simulation</button>
+
+  <!-- RESULTS -->
+  <div class="results">
+
+    <div class="card">
+      <h2>🔵 Round Robin</h2>
+      <div id="rrResults"></div>
+      <div id="rrGantt" class="gantt"></div>
+    </div>
+
+    <div class="card">
+      <h2>🟢 Priority Scheduling</h2>
+      <div id="priorityResults"></div>
+      <div id="prGantt" class="gantt"></div>
+    </div>
+
+  </div>
+   <div class="card comparison">
+    <h2>⚖ Comparison</h2>
+    <div id="comparison"></div>
+  </div>
+
+</div>
+
+<script src="../project-root/script.js"></script>
+</body>
+</html>

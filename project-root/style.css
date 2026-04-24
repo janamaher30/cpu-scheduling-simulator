@@ -1,1 +1,81 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:linear-gradient(120deg,#0f172a,#111827);
+  color:white;
+}
 
+.container{
+  width:90%;
+  margin:auto;
+  padding:20px;
+}
+
+h1{
+  text-align:center;
+}
+.card{
+  background:#1e293b;
+  padding:15px;
+  margin-bottom:15px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.inputs{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+input{
+  padding:10px;
+  border-radius:8px;
+  border:none;
+}
+button{
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#3b82f6;
+  color:white;
+  cursor:pointer;
+}
+
+.run-btn{
+  width:100%;
+  font-size:18px;
+  margin:10px 0;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+th,td{
+  padding:10px;
+  text-align:center;
+  border-bottom:1px solid #334155;
+}
+
+.results{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.gantt{
+  display:flex;
+  margin-top:10px;
+}
+.block{
+  padding:10px;
+  margin-right:3px;
+  background:#22c55e;
+  color:black;
+  font-weight:bold;
+}
+
+.comparison{
+  text-align:center;
+}
