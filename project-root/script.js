@@ -1,3 +1,5 @@
+import { calcMetrics } from "../js/metrics.js";
+
 let processes = [];
 
 // Add Process
@@ -30,13 +32,13 @@ function displayProcesses() {
   });
 }
 
-//  RUN
+// RUN
 function runAlgorithms() {
 
+  // data from team (empty placeholders for now)
   let rrRaw = getRRResultFromTeam();
   let prRaw = getPriorityResultFromTeam();
 
-  // metrics calculation
   let rrMetrics = calcMetrics(
     processes,
     rrRaw.gantt,
@@ -52,7 +54,7 @@ function runAlgorithms() {
   displayResults(rrMetrics, prMetrics);
 }
 
-//  TEAM PLACEHOLDERS
+// TEAM PLACEHOLDERS
 function getRRResultFromTeam() {
   return {
     gantt: [],
@@ -67,7 +69,7 @@ function getPriorityResultFromTeam() {
   };
 }
 
-//  DISPLAY RESULTS
+// DISPLAY RESULTS
 function displayResults(rr, pr) {
 
   document.getElementById("rrResults").innerHTML =
@@ -80,7 +82,6 @@ function displayResults(rr, pr) {
      Avg TAT: ${pr.avgTAT} <br>
      Avg RT: ${pr.avgRT}`;
 
-  //  FIX IMPORTANT HERE
   drawGantt("rrGantt", rr.processes);
   drawGantt("prGantt", pr.processes);
 
@@ -104,9 +105,12 @@ function drawGantt(id, data) {
     let div = document.createElement("div");
     div.className = "block";
 
-    // safe fallback
-    div.innerText = item.process || item.id || "P";
+    div.innerText = item.process || "P";
 
     container.appendChild(div);
   });
 }
+
+// expose to HTML
+window.addProcess = addProcess;
+window.runAlgorithms = runAlgorithms;

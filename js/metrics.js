@@ -15,7 +15,7 @@ export function calcMetrics(processes, gantt, completionTimes) {
   let sumWT = 0, sumTAT = 0, sumRT = 0;
 
   processes.forEach(p => {
-    let TAT = completionTimes[p.id] - p.arrival;
+    let TAT = completionTimes[p.process] - p.arrival;
     if (TAT < 0) {
       alert("TAT can't be negative!");
       TAT = 0;
@@ -25,7 +25,7 @@ export function calcMetrics(processes, gantt, completionTimes) {
       alert("WT can't be negative!");
       WT = 0;
     }
-    let RT = firstStart[p.id] - p.arrival;
+    let RT = firstStart[p.process] - p.arrival;
     if (RT < 0) {
       alert("RT can't be negative!");
       RT = 0;
@@ -35,7 +35,7 @@ export function calcMetrics(processes, gantt, completionTimes) {
     sumTAT += TAT;
     sumRT += RT;
 
-    result.push({ id: p.id, WT, TAT, RT });
+    result.push({ process: p.process, WT, TAT, RT });
   });
 
   return {
