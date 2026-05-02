@@ -1,5 +1,6 @@
 import { calcMetrics } from "../js/metrics.js";
 import { runPriorityPreemptive } from "../js/priority.js";
+import { runRoundRobin } from "../js/roundrobin.js";
 let processes = [];
 let editIndex = -1;
 // Add Process
@@ -40,30 +41,25 @@ function displayProcesses() {
     `;
   });
 }
-// RUN
+//run
 function runAlgorithms() {
-
-  // data from team (empty placeholders for now)
-  let rrRaw = getRRResultFromTeam();
-let prRaw = runPriorityPreemptive(getProcesses());
+  let quantum = +document.getElementById("quantum").value;
+  if (quantum <= 0 || isNaN(quantum)) {
+    return alert("Enter valid quantum");
+  }
+  let rrRaw = runRoundRobin(getProcesses(), quantum);
+  let prRaw = runPriorityPreemptive(getProcesses());
   let rrMetrics = calcMetrics(
-getProcesses(),
+    getProcesses(),
     rrRaw.gantt,
     rrRaw.completionTimes
   );
   let prMetrics = calcMetrics(
-   getProcesses(),
+    getProcesses(),
     prRaw.gantt,
     prRaw.completionTimes
   );
-
-displayResults(rrMetrics, prMetrics, rrRaw.gantt, prRaw.gantt);}
-// TEAM PLACEHOLDERS
-function getRRResultFromTeam() {
-  return {
-    gantt: [],
-    completionTimes: {}
-  };
+  displayResults(rrMetrics, prMetrics, rrRaw.gantt, prRaw.gantt);
 }
 // DISPLAY RESULTS
 function displayResults(rr, pr, rrGantt, prGantt) {

@@ -11,7 +11,6 @@
 <div class="container">
 
   <h1>⚙ CPU Scheduling Simulator</h1>
-
   <!-- INPUT -->
   <div class="card">
     <h2>➕ Add Process</h2>
@@ -23,12 +22,10 @@
       <button onclick="addProcess()">Add</button>
     </div>
   </div>
-
   <div class="card">
     <h2>⏱ Round Robin Quantum</h2>
 <input id="quantum" type="number" placeholder="Enter Quantum" />
   </div>
-
   <!-- TABLE -->
   <div class="card">
     <h2>📋 Processes</h2>
@@ -49,25 +46,21 @@
 <button class="run-btn" onclick="clearAll()">🗑 Clear All</button>
   <!-- RESULTS -->
   <div class="results">
-
     <div class="card">
       <h2>🔵 Round Robin</h2>
       <div id="rrResults"></div>
       <div id="rrGantt" class="gantt"></div>
     </div>
-
-    <div class="card">
+      <div class="card">
       <h2>🟢 Priority Scheduling</h2>
       <div id="priorityResults"></div>
       <div id="prGantt" class="gantt"></div>
     </div>
-
   </div>
    <div class="card comparison">
     <h2>⚖ Comparison</h2>
     <div id="comparison"></div>
   </div>
-
 </div>
 <script type="module" src="../project-root/script.js"></script></body>
 </html>
