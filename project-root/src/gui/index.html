@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CPU Scheduling Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+    <h1>⚙ CPU Scheduling Simulator</h1>
+
+    <div class="card">
+        <h2>➕ Add Process</h2>
+        <div class="inputs">
+            <input id="id" placeholder="Process ID" />
+            <input id="arrival" type="number" placeholder="Arrival Time" />
+            <input id="burst" type="number" placeholder="Burst Time" />
+            <input id="priority" type="number" placeholder="Priority" />
+            <button onclick="addProcess()">Add</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>⏱ Settings & Scenarios</h2>
+        <div style="margin-bottom: 15px;">
+            <label>Round Robin Quantum: </label>
+            <input id="quantum" type="number" placeholder="Quantum" value="3" style="width: 80px;" />
+        </div>
+        <div class="inputs" style="grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));">
+            <button onclick="loadScenario('A')">A: Standard</button>
+            <button onclick="loadScenario('B')">B: Urgency</button>
+            <button onclick="loadScenario('C')">C: Fairness</button>
+            <button onclick="loadScenario('D')">D: Starvation</button>
+            <button onclick="loadScenario('E')">E: Validation</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>📋 Processes Queue</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Arrival</th>
+                    <th>Burst</th>
+                    <th>Priority</th>
+                </tr>
+            </thead>
+            <tbody id="processTable"></tbody>
+        </table>
+        <div style="margin-top: 15px;">
+            <button class="run-btn" onclick="runAlgorithms()">🚀 Run Simulation</button>
+            <button class="run-btn" onclick="clearAll()" style="background: #64748b;">🗑 Clear All</button>
+        </div>
+    </div>
+
+    <div id="analysis-box" class="card" style="display: none; border-left: 5px solid #38bdf8;">
+        <h3 id="scenario-title" style="color: #38bdf8;"></h3>
+        <p><strong>Goal:</strong> <span id="scenario-question"></span></p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div id="priority-analysis" style="background: rgba(56, 189, 248, 0.1); padding: 10px; border-radius: 8px;"></div>
+            <div id="rr-analysis" style="background: rgba(16, 185, 129, 0.1); padding: 10px; border-radius: 8px;"></div>
+        </div>
+    </div>
+    <div class="results">
+        <div class="card">
+            <h2>🔵 Round Robin</h2>
+            <div id="rrResults"></div>
+            <h3>Gantt Chart</h3>
+            <div class="gantt-container" id="rr-gantt-wrapper">
+                <div id="rr-bars" class="bar-row"></div>
+                <div id="rr-ticks" class="tick-row"></div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>🟢 Preemptive Priority</h2>
+            <div id="priorityResults"></div>
+            <h3>Gantt Chart</h3>
+            <div class="gantt-container" id="pr-gantt-wrapper">
+                <div id="pre-bars" class="bar-row"></div>
+                <div id="pre-ticks" class="tick-row"></div>
+            </div>
+        </div>
+    </div>
+    <div class="card" style="text-align: center;">
+        <h2>⚖ Winner Algorithm</h2>
+        <div id="comparison" style="font-size: 24px; font-weight: bold; color: #fbbf24;"></div>
+    </div>
+</div>
+<script type="module" src="script.js"></script></body>
+</html>
