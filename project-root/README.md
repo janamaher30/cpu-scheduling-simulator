@@ -47,6 +47,6 @@ project-root/
 │   │   ├── priority.js      # Preemptive Priority Logic
 │   │   ├── roundrobin.js    # Round Robin Logic
 │   │   └── metrics.js       # Calculations Engine
-│   └── model/
+│   └── test/
 │       └── testScenarios.js # Pre-defined Scenarios Data
 └── README.md                # Project Documentation
