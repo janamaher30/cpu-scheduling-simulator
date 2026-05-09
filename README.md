@@ -16,7 +16,7 @@ This project is a high-fidelity web-based simulation tool developed for the **Op
 
 ---
 
-### **🚀 Project Requirements**
+### ** Project Requirements**
 To run this project, you only need a modern web browser (Chrome, Firefox, Edge, or Safari). 
 * **Core Technologies:** HTML5, CSS3 (Flexbox/Grid), Vanilla JavaScript (ES6+ Modules).
 * **Dependencies:** None. The project is lightweight and runs entirely on the client side.
