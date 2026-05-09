@@ -1,11 +1,11 @@
-# ⚙️ CPU Scheduling Simulator: Round Robin vs. Preemptive Priority
+#  CPU Scheduling Simulator: Round Robin vs. Preemptive Priority
 
 ### **Project Overview**
 This project is a high-fidelity web-based simulation tool developed for the **Operating Systems** course. It provides a comparative analysis between two major CPU scheduling algorithms: **Round Robin** (focusing on fairness) and **Preemptive Priority** (focusing on urgency). The simulator helps in understanding how different scheduling policies impact system performance through visual Gantt charts and precise metrics (WT, TAT, RT).
 
 ---
 
-### **👥 Team Members**
+### ** Team Members**
 - **جنى ماهر ناصر** 
 - **رغد ايهاب محمود**
 - **بسملة ابراهيم السيد**
@@ -23,7 +23,7 @@ To run this project, you only need a modern web browser (Chrome, Firefox, Edge, 
 
 ---
 
-### **✨ Key Features**
+### ** Key Features**
 1.  **Dynamic Process Management:** Add, edit, and delete processes at runtime.
 2.  **Input Validation:** Robust error handling for duplicate IDs, empty fields, and invalid time/priority values.
 3.  **Real-time Visualization:** Dynamic generation of color-coded Gantt charts with precise time markers.
@@ -35,7 +35,7 @@ To run this project, you only need a modern web browser (Chrome, Firefox, Edge, 
 
 ---
 
-### **📂 Directory Structure**
+### ** Directory Structure**
 ```text
 project-root/
 ├── src/
@@ -53,7 +53,7 @@ project-root/
 
 ---
 
-### **🛠️ How to Build & Run**
+### ** How to Build & Run**
 1.  **Download/Clone:** Clone the repository or download the ZIP file.
 2.  **Navigate:** Go to the `src/gui/` directory.
 3.  **Launch:**
@@ -62,7 +62,7 @@ project-root/
 
 ---
 
-### **📝 Technical Assumptions & Rules**
+### ** Technical Assumptions & Rules**
 * **Priority Rule:** A **lower numerical value** represents a higher priority (e.g., Priority 0 or 1 is the highest).
 * **Tie-Breaking:** If two processes arrive at the same time with the same priority, the one that appeared first in the input list (**FCFS**) is handled first.
 * **Preemption:** The Priority algorithm is **Preemptive**; it re-evaluates the CPU owner at every 1-unit time step to ensure high-priority tasks are served immediately.
@@ -70,7 +70,7 @@ project-root/
 
 ---
 
-### **📈 Analysis Formulas**
+### ** Analysis Formulas**
 The simulator uses the following standard Operating Systems formulas:
 
 * **Turnaround Time (TAT):** $$TAT = Completion\ Time - Arrival\ Time$$
@@ -79,7 +79,7 @@ The simulator uses the following standard Operating Systems formulas:
 
 ---
 
-### **🧪 Test Scenarios Breakdown**
+### ** Test Scenarios Breakdown**
 | Scenario | Focus | Description |
 | :--- | :--- | :--- |
 | **Scenario A** | *Normal* | Basic workload to test general logic and a standard queue. |
