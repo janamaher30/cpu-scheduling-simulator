@@ -93,7 +93,7 @@ th {
 .gantt-container {
     margin-top: 15px;
     padding: 15px;
-    background: #0f172a; /* Dark background to match UI */
+    background: #0f172a; 
     border: 1px solid #334155;
     border-radius: 8px;
     overflow-x: auto;

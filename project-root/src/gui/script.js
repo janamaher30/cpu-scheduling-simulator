@@ -136,8 +136,8 @@ function loadScenario(letter) {
     displayProcesses();
     document.getElementById("scenario-title").innerText = data.title;
     document.getElementById("scenario-question").innerText = data.question;
-    document.getElementById("priority-analysis").innerHTML = `<p><b>Analysis:</b> ${data.analysis.priority}</p>`;
     document.getElementById("rr-analysis").innerHTML = `<p><b>Analysis:</b> ${data.analysis.rr}</p>`;
+    document.getElementById("priority-analysis").innerHTML = `<p><b>Analysis:</b> ${data.analysis.priority}</p>`;
     analysisBox.style.display = "block";
     runAlgorithms();
 }
