@@ -10,7 +10,7 @@ This project is a high-fidelity web-based simulation tool developed for the **Op
 - **رغد ايهاب محمود**
 - **بسملة ابراهيم السيد**
 - **اوليفيا ناجي فوزي**
-- **روان سعيد عيد**
+- **روان سعد عيد**
 - **حبيبة كمال رمضان**
 - **زيزف اشرف جمال**
 
