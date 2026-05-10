@@ -138,6 +138,28 @@ th {
 .comparison h2 {
     color: #fbbf24; 
 }
+/* Analysis Boxes */
+#rr-analysis {
+    background: rgba(59, 130, 246, 0.15);
+    border-left: 5px solid #3b82f6;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#rr-analysis b {
+    color: #60a5fa;
+}
+
+#priority-analysis {
+    background: rgba(16, 185, 129, 0.15);
+    border-left: 5px solid #10b981;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#priority-analysis b {
+    color: #34d399;
+}
 /* 7. Responsive Design */
 @media (max-width: 768px) {
     .results {
