@@ -117,18 +117,17 @@ th {
     filter: brightness(1.2);
     cursor: pointer;
 }
-.tick-row {
+    .tick-row {
     display: flex;
+    height: 25px;
     margin-top: 5px;
     border-top: 2px solid #334155;
+    position: relative; 
 }
+
 .tick-row div {
-    font-size: 11px;
+    font-size: 12px;
     color: #94a3b8;
-    border-left: 1px solid #334155;
-    padding-left: 4px;
-    height: 20px;
-    flex-shrink: 0;
 }
 /* 6. Results Layout */
 .results {
